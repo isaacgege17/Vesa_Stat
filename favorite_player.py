@@ -1,0 +1,7 @@
+print("FAVORITE PLAYER")
+favorite_player = input("Who is your favorite basketball player: ")
+team = input("Team: ")
+jersey_no = input("Jersey Number: ")
+print("Favorite player: ", favorite_player)
+print("Team number: ", team)
+print("Jersey number: ", jersey_no)
