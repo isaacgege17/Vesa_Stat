@@ -1,4 +1,8 @@
-print("BASKETBALL TRACKER")
+def title():
+    print("BASKETBALL TRACKER")
+title()
+def goodbye():
+    print("Thanks for using basketball tracker!")
 for i in range(3):
     player_name = input("Enter player name: ")
     points_scored = int(input("Enter points scored: "))
@@ -18,6 +22,8 @@ for i in range(3):
         print("Great Performance! ")
     else:
         print("Keep working hard! ")
+
+goodbye()
 
 
 
