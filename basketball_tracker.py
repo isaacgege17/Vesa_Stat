@@ -3,38 +3,39 @@ def title():
 title()
 def goodbye():
     print("Thanks for using basketball tracker!")
-no_players = int(input("Enter number of players: "))
 players = []
-points = []
-rebounds = []
-assists = []
-fouls =[]
+class Player:
+    def __init__(self, name, points, rebounds, assists, fouls):
+        self.name = name
+        self.points = points
+        self.rebounds = rebounds
+        self.assists = assists
+        self.fouls = fouls
+no_players = int(input("Number of players: "))
 for i in range(no_players):
-    player_name = input("Player name: ")
-    player_points = int(input("Points scored: "))
-    player_rebounds = int(input("Rebounds: "))
-    player_assists = int(input("Assists: "))
-    player_fouls = int(input("Fouls: "))
-
-    players.append(player_name)
-    points.append(player_points)
-    rebounds.append(player_rebounds)
-    assists.append(player_assists)
-    fouls.append(player_fouls)
-for i in range(len(players)):
+    name = input("Player name: ")
+    points = int(input("Points scored: "))
+    rebounds = int(input("Rebounds: "))
+    assists = int(input("Assists: "))
+    fouls = int(input("Fouls: "))
+    player = Player(name, points, rebounds, assists, fouls)
+    players.append(player)
+print("TEAM ROSTER")
+for player in players:
     print()
-    print("Player Name: ", players[i].upper())
-    print("Points : ", points[i])
-    print("Rebounds: ", rebounds[i])
-    print("Assists: ", assists[i])
-    print("Fouls: ", fouls[i])
+    print("Player Name: ", player.name.upper())
+    print("Points : ", player.points)
+    print("Rebounds: ", player.rebounds)
+    print("Assists: ", player.assists)
+    print("Fouls: ", player.fouls)
     print()
-    if points[i] >= 30:
+    if player.points >= 30:
         print("MVP Performance! ")
-    elif points[i] >= 20:
+    elif player.points >= 20:
         print("Great Performance! ")
     else:
         print("Keep working hard! ")
+    print("______________________")
 
 goodbye()
 
