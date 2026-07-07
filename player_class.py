@@ -1,9 +1,4 @@
-class Team:
-    def __init__(self, name, wins, losses):
-        self.name = name
-        self.wins = wins
-        self.losses = losses
-team1 = Team("Lakers",33,5)
-team2 = Team("Mavericks",15,4)
-print(team1)
-print(team2)
+def points(a,b):
+    return a+b
+total = points(55,44)
+print(total)

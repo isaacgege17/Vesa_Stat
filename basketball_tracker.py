@@ -37,6 +37,14 @@ for i in range(no_players):
     fouls = int(input("Fouls: "))
     player = Player(name, points, rebounds, assists, fouls)
     players.append(player)
+def player_performance(player_points):
+    if player_points >= 30:
+        return "MVP Performance! "
+    elif player_points >= 20:
+        return "Great Performance! "
+    else:
+        return "Keep working hard! "
+    print("______________________")
 info()
 print("TEAM ROSTER")
 for player in players:
@@ -47,13 +55,7 @@ for player in players:
     print("Assists: ", player.assists)
     print("Fouls: ", player.fouls)
     print()
-    if player.points >= 30:
-        print("MVP Performance! ")
-    elif player.points >= 20:
-        print("Great Performance! ")
-    else:
-        print("Keep working hard! ")
-    print("______________________")
+    print(player_performance(player.points))
 
 goodbye()
 
