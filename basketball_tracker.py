@@ -3,6 +3,24 @@ def title():
 title()
 def goodbye():
     print("Thanks for using basketball tracker!")
+team_name = input("Team name: ")
+coach_name = input("Coach name: ")
+venue_name = input("Venue name: ")
+no_players = int(input("Number of players: "))
+game_info = {
+    "Team Name" : team_name,
+    "Coach Name" : coach_name,
+    "Venue Name" : venue_name,
+    "Number of Players" : no_players
+}
+def info():
+    print()
+    print("Team Name: ", game_info["Team Name"].upper())
+    print("Coach Name: ", game_info["Coach Name"].upper())
+    print("Venue Name: ", game_info["Venue Name"].upper())
+    print("Number of Players: ", game_info["Number of Players"])
+    print("________________________")
+    print()
 players = []
 class Player:
     def __init__(self, name, points, rebounds, assists, fouls):
@@ -11,7 +29,6 @@ class Player:
         self.rebounds = rebounds
         self.assists = assists
         self.fouls = fouls
-no_players = int(input("Number of players: "))
 for i in range(no_players):
     name = input("Player name: ")
     points = int(input("Points scored: "))
@@ -20,6 +37,7 @@ for i in range(no_players):
     fouls = int(input("Fouls: "))
     player = Player(name, points, rebounds, assists, fouls)
     players.append(player)
+info()
 print("TEAM ROSTER")
 for player in players:
     print()
