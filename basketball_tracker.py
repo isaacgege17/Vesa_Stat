@@ -14,8 +14,7 @@ game_info = {
     "Number of Players" : no_players
 }
 def info():
-    print()
-    print("Team Name: ", game_info["Team Name"].upper())
+    print("/nTeam Name: ", game_info["Team Name"].upper())
     print("Coach Name: ", game_info["Coach Name"].upper())
     print("Venue Name: ", game_info["Venue Name"].upper())
     print("Number of Players: ", game_info["Number of Players"])
@@ -56,7 +55,19 @@ for player in players:
     print("Fouls: ", player.fouls)
     print()
     print(player_performance(player.points))
-
+choice = input("Would you like to save this roster? (yes/no): ")
+file = open("roster.txt", "w")
+for player in players:
+    if choice.lower() == "yes":
+        file.write(player.name + "\n")
+        file.write(str(player.points) + "\n")
+        file.write(str(player.rebounds) + "\n")
+        file.write(str(player.assists) + "\n")
+        file.write(str(player.fouls) + "\n")
+        print("Roster saved")
+    else:
+        print("Roster not saved")
+file.close()
 goodbye()
 
 
