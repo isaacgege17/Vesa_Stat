@@ -38,8 +38,12 @@ for player in players:
     print("Fouls: ", player.fouls)
     print()
     print(player_performance(player.points))
-choice = input("Would you like to save this roster? (yes/no): ").strip()
-if choice.lower() == "yes":
+while True:
+    choice = input("Would you like to save this roster? (yes/no): ").strip().lower()
+    if choice == "yes" or choice == "no":
+        break
+    print("Please enter yes or no")
+if choice == "yes":
     file = open("roster.text", "w")
     for player in players:
         file.write(f"{player.name}\n")
