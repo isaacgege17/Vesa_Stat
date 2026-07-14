@@ -1,5 +1,10 @@
-cubana chief priest of gue east 
-1
-1
-1
-1
+Player Name: Isaac 
+Points: 25
+Rebounds: 3
+Assists: 3
+Fouls: 3
+Player Name: Walter
+Points: 22
+Rebounds: 4
+Assists: 1
+Fouls: 2

@@ -10,7 +10,7 @@ game_info = {
     "Coach Name" : coach_name,
     "Venue Name" : venue_name,
     "Number of Players" : no_players
-}
+    }
 def info():
     print(f"\n Team Name:  {game_info['Team Name']}")
     print(f"Coach Name: {game_info['Coach Name']}")
@@ -30,13 +30,11 @@ for i in range(no_players):
 info()
 print("TEAM ROSTER")
 for player in players:
-    print()
-    print("Player Name: ", player.name.title())
-    print("Points : ", player.points)
-    print("Rebounds: ", player.rebounds)
-    print("Assists: ", player.assists)
-    print("Fouls: ", player.fouls)
-    print()
+    print(f"\nPlayer Name:  {player.name.title()}\n")
+    print(f"Points : {player.points}\n")
+    print(f"Rebounds: {player.rebounds}\n")
+    print(f"Assists: {player.assists}\n")
+    print(f"Fouls: {player.fouls}\n")
     print(player_performance(player.points))
 while True:
     choice = input("Would you like to save this roster? (yes/no): ").strip().lower()
@@ -44,13 +42,13 @@ while True:
         break
     print("Please enter yes or no")
 if choice == "yes":
-    file = open("roster.text", "w")
+    file = open("roster.txt", "w")
     for player in players:
-        file.write(f"{player.name}\n")
-        file.write(f"{player.points}\n")
-        file.write(f"{player.rebounds}\n")
-        file.write(f"{player.assists}\n")
-        file.write(f"{player.fouls}\n")
+        file.write(f"Player Name: {player.name}\n")
+        file.write(f"Points: {player.points}\n")
+        file.write(f"Rebounds: {player.rebounds}\n")
+        file.write(f"Assists: {player.assists}\n")
+        file.write(f"Fouls: {player.fouls}\n")
     file.close()
     print("Roster saved")
 else:
